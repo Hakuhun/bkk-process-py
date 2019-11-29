@@ -1,0 +1,6 @@
+elephas
+numpy
+tensorflow
+keras
+pyspark
+kafka
