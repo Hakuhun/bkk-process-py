@@ -25,14 +25,14 @@ labels = []
 features = []
 
 for message in consumer:
-    print(message.value)
+    #print(message.value)
     labels.append(message.value["label"])
     features.append(message.value["features"]["values"])
 
 labeledpoints = np.array(labels, features)
 
 model = Sequential()
-model.add(Dense(128, input_dim=784))
+model.add(Dense(2, input_dim=11))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
 model.add(Dense(128))
